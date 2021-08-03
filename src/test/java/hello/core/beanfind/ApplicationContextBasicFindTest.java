@@ -27,7 +27,7 @@ public class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("이름없이 타입으로 조회")
     void findBeanByType() {
-        MemberService memberService = ac.getBean("memberService", MemberService.class);
+        MemberService memberService = ac.getBean(MemberService.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
 
