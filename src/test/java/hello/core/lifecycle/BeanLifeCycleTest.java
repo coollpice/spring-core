@@ -11,7 +11,7 @@ public class BeanLifeCycleTest {
 
     @Test
     public void lifeCycleTest() {
-        ConfigurableApplicationContext ac = new AnnotationConfigApplicationContext(LifeCycleConfig.class);
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(LifeCycleConfig.class);
         NetworkClient bean = ac.getBean(NetworkClient.class);
         ac.close();
     }
